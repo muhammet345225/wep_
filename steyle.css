@@ -1,0 +1,376 @@
+/* Basic Styling */
+body {
+  font-family: 'Open Sans', sans-serif; /* Modern font */
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #4182e3; /* Light gray background */
+  color: #4182e3; /* Dark gray text */
+}
+
+  
+/* H1 Başlık Stili */
+h1 {
+    font-weight: 100; /* Slightly bolder headings */
+    color: #4182e3;   /* Darker blue for headings */
+    font-size: 2.5em; /* Büyük başlık */
+    margin-bottom: 0.5em;
+}
+
+/* H2 Başlık Stili */
+h2 {
+    font-weight: 100;
+    color: #4182e3;
+    font-size: 2em;   /* Orta boy başlık */
+    margin-bottom: 0.4em;
+}
+
+/* H3 Başlık Stili */
+h3 {
+    font-weight: 100;
+    color: #4182e3;
+    font-size: 1.5em; /* Daha küçük başlık */
+    margin-bottom: 0.3em;
+}
+
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+  
+  a {
+    color: #4182e3; /* Darker blue for links */
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  /* Navbar Styling */
+  .navbar {
+    background-color: #4182e3; /* Darker blue navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+  }
+  
+  .nav-link {
+    background-color: transparent !important; /* Arka planı şeffaf yap */
+    padding: 0.5rem; /* Düzgün boşluk için padding */
+    border: none; /* Kenar çizgilerini kaldır */
+    border-radius: 0; /* Köşeleri yuvarlatma kaldır */
+    color: white !important; /* Metin rengi beyaz */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Hover animasyonu */
+  }
+  
+  .nav-link.active {
+    font-weight: bold; /* Aktif öğeyi vurgula */
+    background-color: transparent !important; /* Aktif arka planı kaldır */
+    color: #ffffff !important; /* Aktif metin rengi */
+  }
+  
+  .nav-link:hover {
+    color: #f8f9fa; /* Hover durumunda metin rengi */
+  }
+  
+  
+  
+  /* Section Styling */
+  .container {
+    padding: 3rem 0;
+  }
+  
+  section { /* Apply to all sections */
+    background-color: #4182e3;
+    padding: 3rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08); /* More prominent shadow */   
+    margin-bottom: 2rem;
+  }
+  
+  #anasayfa {
+    background-color: #4182e3; /* Light gray background */
+    background-image: url('your-image.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column; /* Stack image and heading vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center;
+    align-items: center;
+    color: rgb(47, 72, 228);
+    text-shadow: 2px 2px 4px rgb(15, 105, 232);
+  }
+  
+  #anasayfa h1 {
+    font-size: 3em; /*Adjust font size as needed*/
+    z-index: 1;
+    text-align: center;
+  }
+  
+  #anasayfa p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  /* Accordion Styling */
+  .accordion-button {
+    background-color: #4182e3;
+    color: #4182e3;
+    font-weight: 600;
+  }
+  
+  .accordion-button:focus {
+    box-shadow: none;
+  }
+  
+  
+  /* Form Styling */
+  .form-control {
+    border-radius: 8px;
+  }
+  
+  .btn-primary {
+    background-color: #4182e3;
+    border-color: #4182e3;
+  }
+  
+  .btn-primary:hover {
+    background-color: #4182e3;
+    border-color: #4182e3;
+  }
+
+  .video-description {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #368dda; /* Slightly grayed-out text */
+  }
+
+  .youtube-thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 500px;
+    box-shadow: 0 2px 5px rgba(216, 6, 6, 0.1);
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    #anasayfa h1 {
+        font-size: 2.5rem;
+    }
+    #anasayfa p {
+        font-size: 1rem;
+    }
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.background-video {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Hide overflow */
+}
+
+.background-video video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Send the video behind the content */
+    opacity: 0.7; /* Optional: Adjust opacity */
+    transform: translate(-50%, -50%); /* Center the video */
+}
+
+.content {
+    position: relative; /* Ensure content is above video */
+    color: rgb(255, 253, 253); /* Text color */
+    text-align: center; /* Center text */
+    z-index: 1; /* Ensure content is above the video */
+    display: flex;
+    flex-direction: column; /* Stack h1 and p vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 100%; /* Full height */
+    padding: 20px; /* Add padding if necessary */
+}
+
+.content h1 {
+    font-size: 4em; /* Large font size for h1 */
+    margin: 0; /* Remove default margin */
+}
+
+.content p {
+    font-size: 2em; /* Large font size for p */
+    margin-top: 10px; /* Space between h1 and p */
+}
+
+.card-img-top {
+    border-radius: 10px; /* Rounded corners for images */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Optional: set a max-height */
+}
+
+.video-container {
+    text-align: center;
+}
+
+.videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align cards */
+}
+
+.video-card {
+    border: 1px solid #4182e3;
+    border-radius: 10px;
+    margin: 10px;
+    width: 200px; /* Adjust width as needed */
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional shadow */
+}
+
+.video-card img {
+    width: 100%; /* Responsive image */
+    height: auto;
+}
+
+.navbar-logo {
+  background-color: #333; /* Navbar'ın arka plan rengini kullanın */
+  border-radius: 50%; /* Eğer logo yuvarlaksa, kenarları pürüzsüz hale getirir */
+}
+
+footer {
+  background-color: #4182e3;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center; /* Metni ortala */
+}
+
+footer .container {
+  max-width: 960px; /* Genişliği sınırla (isteğe bağlı) */
+  margin: 0 auto; /* Sayfa ortasına yerleştir */
+}
+
+footer nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px; /* Bağlantılar arasında boşluk */
+}
+
+footer nav a:hover {
+  text-decoration: underline;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  background-color: #4182e3;
+  padding: 10px 20px;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end; /* Menü öğelerini sağa hizalar */
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #4182e3;
+  padding: 8px 16px;
+  transition: background-color 0.3s;
+}
+
+.menu a:hover {
+  background-color: #4182e3;
+  border-radius: 4px;
+}
+
+.navbar-brand span {
+  display: inline-block;
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: transparent;
+  background-image: linear-gradient(90deg, #4182e3, #4182e3, #4182e3, #4182e3, #4182e3);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: fire-effect 3s infinite;
+  text-shadow: 
+    0 0 20px #4182e3, 
+    0 0 30px #4182e3, 
+    0 0 40px #4182e3, 
+    0 0 50px #4182e3, 
+    0 0 60px #4182e3, 
+    0 0 70px #4182e3;
+}
+
+@keyframes fire-effect {
+  0% {
+    background-position: 0% 50%;
+    text-shadow: 
+      0 0 10px #4182e3, 
+      0 0 20px #4182e3, 
+      0 0 30px #4182e3, 
+      0 0 40px #4182e3;
+    transform: scale(1);
+  }
+  50% {
+    background-position: 100% 50%;
+    text-shadow: 
+      0 0 30px #4182e3, 
+      0 0 40px #4182e3, 
+      0 0 50px #4182e3, 
+      0 0 60px #4182e3;
+    transform: scale(1.1);
+  }
+  100% {
+    background-position: 0% 50%;
+    text-shadow: 
+      0 0 20px #4182e3, 
+      0 0 30px #4182e3, 
+      0 0 40px #4182e3, 
+      0 0 50px #4182e3;
+    transform: scale(1);
+  }
+}
+
+.youtube-thumbnail {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease-in-out;
+}
+
+.youtube-thumbnail:hover {
+  transform: scale(1.5) ;
+}
+
+.about-section {
+  background-color: #4182e3; /* Açık mavi tonları */
+  padding: 20px; /* Alan eklemek için */
+  border-radius: 10px; /* Köşeleri yuvarlatmak için */
+}
+
